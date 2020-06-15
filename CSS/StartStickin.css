@@ -1,0 +1,505 @@
+body {
+  background: linear-gradient(110deg, #bfd6d9 45%, #9eb7c5 30%);
+  background-repeat: none;
+  background-size: contain;
+  width: 100%;
+  height: 100vh;
+  margin: 0px;
+  margin-top: 6px;
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  height: 95vh;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.4);
+}
+
+@media (min-width: 900px) {
+  body {
+    overflow: hidden;
+  }
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+  }
+  nav {
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: rgb(108, 136, 151);
+  margin-left: 5%;
+}
+
+.nav-links {
+  display: none;
+  cursor: pointer;
+}
+
+/* Side Menu Content */
+
+.hamburger-menu {
+  margin-right: 5%;
+  display: block;
+  cursor: pointer;
+}
+
+.side-menu-position {
+  padding-top: 25px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.side-menu-design {
+  background-color: #4a616e;
+  background-size: 1300px 700px;
+  background-repeat: repeat;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: 0.4s ease-in-out;
+  overflow: scroll;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.side-menu-header {
+  border-bottom: 1px solid #bfd6d9;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 25px 25px 25px;
+}
+
+.logo-side {
+  position: abosolute;
+  text-align: center;
+  margin-left: 5vw;
+  font-size: 26px;
+  flex-grow: 2;
+  font-weight: bold;
+  color: #bfd6d9;
+}
+
+.side-menu-content {
+  color: #bfd6d9;
+  font-size: 24px;
+  margin: 25px;
+  padding-left: 0;
+}
+
+.side-menu-content li {
+  list-style: none;
+  margin-bottom: 25px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.show-menu {
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+#side-about-button,
+#side-stick-button {
+  margin-right: 2vw;
+}
+
+.about-us-list {
+  font-size: 20px;
+  margin: 0;
+  padding-left: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.stick-item-list {
+  font-size: 20px;
+  margin: 0;
+  padding-left: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.about-us-list li,
+.stick-item-list li {
+  display: block;
+  padding: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.about-us-list li:hover,
+.stick-item-list li:hover {
+  background-color: #bfd6d9;
+  color: #4a616e;
+}
+
+/* Desktop Nav */
+
+@media (min-width: 1025px) {
+  .logo {
+    margin-left: 10px;
+  }
+
+  .hamburger-menu {
+    display: none;
+  }
+  .nav-links {
+    display: flex;
+    margin-right: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+  }
+
+  .link {
+    margin-right: 15px;
+  }
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+#menu-3-button:hover {
+  color: #4a616e;
+}
+
+.dropdown-menu {
+  display: none;
+}
+@media (min-width: 900px) {
+  .dropdown-menu {
+    background-color: #9eb7c5;
+    display: initial;
+    visibility: hidden;
+    padding: 15px;
+    position: absolute;
+    top: 44px;
+    width: 150px;
+    z-index: 10;
+    text-align: center;
+    text-transform: uppercase;
+    box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.4);
+  }
+}
+
+.show {
+  visibility: visible;
+}
+
+.hidden {
+  display: none;
+}
+
+.menu-1 {
+  right: 200px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.menu-2 {
+  right: 100px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+li {
+  list-style: none;
+}
+
+.menu-item-list {
+  margin: 0;
+  padding-left: 0;
+}
+
+.menu-item-list li a,
+.menu-item-list li a:visited,
+.menu-item-list li a:focus {
+  color: black;
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu-item-list li a:hover {
+  background-color: #e3f2ff;
+  color: #4a616e;
+}
+
+/* Product Card */
+
+.product-card {
+  background: #e3f2ff;
+  width: 81vw;
+  height: fit-content;
+  padding: 2% 5%;
+  margin-top: 5vh;
+  border-radius: 5px;
+}
+
+@media (min-height: 700px) {
+  .product-card {
+    height: fit-content;
+  }
+}
+
+@media (min-width: 900px) {
+  .product-card {
+    width: 80%;
+    height: 490px;
+    margin: 0px;
+    overflow-x: hidden;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.4);
+  }
+}
+
+.category-price-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+@media (min-width: 900px) {
+  .category-price-container {
+    font-size: 18px;
+  }
+}
+
+.category-container {
+  display: flex;
+}
+#category {
+  margin-left: 5px;
+}
+.price-container {
+  display: flex;
+}
+
+p {
+  font-size: 16px;
+  text-align: center;
+}
+h2 {
+  margin-top: 5px;
+  font-size: 22px;
+}
+
+h3 {
+  margin-top: 5px;
+  font-size: 19px;
+  margin-bottom: 20px;
+}
+
+.title-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.title1,
+.title2 {
+  width: 50%;
+  text-align: center;
+}
+
+.title1:hover,
+.title2:hover {
+  color: #9eb7c5;
+  border-bottom-color: #9eb7c5;
+  cursor: pointer;
+}
+
+.active-title {
+  color: #7695a7;
+  border-bottom: 5px solid #7695a7;
+}
+
+.inactive-title {
+  color: rgba(131, 161, 182, 0.486);
+  border-bottom: 5px solid rgba(131, 161, 182, 0.486);
+}
+
+#pro-benefit-list li {
+  list-style: disc;
+  margin-bottom: 5px;
+}
+
+@media (min-width: 900px) {
+  p {
+    font-size: 17px;
+    text-align: left;
+  }
+  .product-data {
+    display: flex;
+    justify-content: space-between;
+  }
+  .product-images {
+    display: flex;
+    justify-content: flex-start;
+    height: 45vh;
+  }
+  .title-buttons {
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+}
+
+.large-image-container {
+  /* background: black; */
+  background-image: url("../images/stick-chair.JPG");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 30vh;
+}
+@media (min-width: 900px) {
+  .large-image-container {
+    width: 36vw;
+    height: 100%;
+  }
+}
+
+.image-slider {
+  background: #e3f2ff;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 10vh;
+  margin-bottom: 25px;
+}
+
+@media (min-width: 900px) {
+  .image-slider {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 9vw;
+    height: 100%;
+  }
+}
+
+.small-image-container {
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 900px) {
+  .small-image-container {
+    width: 100%;
+    height: 100%;
+    border-top: 2px solid#e3f2ff;
+  }
+  .product-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30vw;
+  }
+  .description {
+    height: 35vh;
+    width: fit-content;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-right: 10px;
+  }
+}
+
+.img1,
+.img2,
+.img3 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-top: none;
+  cursor: pointer;
+}
+
+.img1:hover,
+.img2:hover,
+.img3:hover {
+  transform: scale(0.97);
+}
+
+.img1 {
+  background-image: url("../images/stick-chair.JPG");
+}
+.img2 {
+  background-image: url("../images/Stick-cool.jpg");
+  opacity: 0.6;
+}
+.img3 {
+  background-image: url("../images/stick-driving.jpg");
+  opacity: 0.6;
+}
+
+#buybtn {
+  background: #bfd6d9;
+  width: 50%;
+  height: 40px;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-left: 25%;
+  border: 3px solid black;
+  border-radius: 15px;
+  margin-top: 20px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+
+#buybtn:hover {
+  background-color: #9eb7c5;
+  box-shadow: 0px 15px 20px rgba(12, 41, 61, 0.4);
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+@media (min-width: 900px) {
+  #buybtn {
+    width: 50%;
+    margin-right: 25%;
+    align-self: center;
+    margin-bottom: 30px;
+  }
+}
+
+/* scrollbar magic */
+.description::-webkit-scrollbar-track {
+  background-color: #e3f2ff;
+}
+
+.description::-webkit-scrollbar {
+  background-color: #e3f2ff;
+}
+
+.description::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgb(136, 166, 182);
+}
+
+/* background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/sidebar-background.png"); */

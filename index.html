@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="CSS/StartStickin.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>StickWithMe.com</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">StickWithMe</div>
+            <div class="nav-links">
+                <div class="link" id="menu-1-button">About Us</div>
+                <div class="link" id="menu-2-button">Stick Life</div>
+                <div class="link" ><a id="menu-3-button" href="#">Contact Us</a></div>
+            </div>
+            <div class="hamburger-menu" id="menu-trigger">
+                <img src="icons/hamburger.svg" alt="Hamburger icon">
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="product-card">
+            <div class="category-price-container">
+                <div class="category-container">Category: <div id="category"></div></div>
+                <div class="price-container">Price: $<div id="price">1115</div></div>
+            </div>
+            <h2 class="product-name">Stick Personal</h2>
+            <div class="product-data">
+                <div class="product-images">
+                    <div class="large-image-container"></div>
+                    <div class="image-slider">
+                        <div class="small-image-container img1"></div>
+                        <div class="small-image-container img2"> </div>
+                        <div class="small-image-container img3"> </div>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <div class="description">
+                        <h3 class="title-buttons">
+                            <div class="title1 active-title">Product Info</div>
+                            <div class="title2 inactive-title">Benefits</div>
+                        </h3>
+                        <p id="pro-description">Stick personal is the ultimate technological advancement. 
+                          Each stick is imbued with magical properties and it smells great. 
+                          Stick personal can be your best friend, your best form of protection from cyber bullies, and more.
+                        </p>
+                        <p class="hidden" id="pro-benefit">
+                          Stick personal has a number of benefits including:
+                          <ol class="hidden" id="pro-benefit-list">
+                            <li>being a great drinking buddy.</li>
+                            <li>always able to get you home safely.</li>
+                            <li>can help you achieve your goals (world domination).</li>
+                            <li>bail you out of jail.</li>
+                          </ol>
+                        </p>
+                    </div>
+                    <button id="buybtn">Buy Now</button>
+                </div>
+              </div>
+
+        </div>
+    </main>
+    
+    <!-- Side Menu -->
+    <aside class="side-menu-position side-menu-design" id="side-menu">
+        <header class="side-menu-header">
+          <div class="logo-side">StickWithMe</div>
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/x.svg" alt="Close this menu" id="menu-close">
+        </header>
+        <ul class="side-menu-content">
+          <li id="side-about-button">+ About Us</li>
+          <ul class="about-us-list">
+            <li class="item">Our Weight</li>
+            <li class="item">How?</li>
+          </ul>
+          <li id="side-stick-button">+ Stick Life</li>
+          <ul class="stick-item-list">
+            <li class="item">Our Sticks</li>
+            <li class="item">Best Practices</li>
+            <li class="item">Worst Practices</li>
+            <li class="item">Injury Support</li>
+            <li class="item">Stick Safety</li>
+          </ul>
+          <li>Contact Us</li>
+        </ul>
+      </aside>
+
+
+    <!-- Drop Downs -->
+    <aside class="dropdown-menu menu-1">
+        <ul class="menu-item-list">
+          <li><a href="#">Our Weight</a></li>
+          <li><a href="#">How?</a></li>
+        </ul>
+      </aside>
+
+      <aside class="dropdown-menu menu-2">
+        <ul class="menu-item-list">
+          <li><a href="#">Our Sticks</a></li>
+          <li><a href="#">Best Practices</a></li>
+          <li><a href="#">Worst Practices</a></li>
+          <li><a href="#">Injury Support</a></li>
+          <li><a href="#">Stick Safety</a></li>
+        </ul>
+      </aside> 
+
+    <script src="Javascript/StartStickin.JS"></script>
+</body>
+</html>
